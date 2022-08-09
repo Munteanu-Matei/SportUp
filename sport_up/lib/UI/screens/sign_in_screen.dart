@@ -1,35 +1,24 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: Text("Sign In Screen"),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, "/profile"),
-              child: Text("go to profile"),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, "/"),
-              child: Text("go to home page"),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, "/add_event"),
-              child: Text("add event"),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, "/sign_in"),
-              child: Text("sign in"),
-            )
-          ],
-        ),
-      ),
-    );
+        body: SafeArea(
+            child: Center(
+      child: Column(children: [
+        //SportUP
+        Text("SportUp"),
+      ]),
+    )));
   }
 }
