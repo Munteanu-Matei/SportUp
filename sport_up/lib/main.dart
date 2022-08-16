@@ -10,15 +10,10 @@ import 'UI/screens/login/sign_in_screen.dart';
 import 'UI/screens/login/sign_up_page.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final CollectionReference _users =
-      FirebaseFirestore.instance.collection("users");
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
